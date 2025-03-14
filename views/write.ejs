@@ -1,3 +1,15 @@
 <%- include("partials/header.ejs") %>
     <h1>Write a Blog</h1>
+    <form action="/write" method="post">
+        <label for="author">Name :</label>
+        <input name="author" type="text" placeholder="Enter your Name"><br>
+        <label for="article-image">Insert Image : </label>
+        <input name="article-image" type="file" placeholder="Add an image"><br>
+        <label for="category">Choose your Category:</label>
+        <input name="category" type="text" placeholder="Category eg: technology"><br>
+        <label for="esay">Add your thoughts :</label><br>
+        <textarea name="essay">
+        </textarea><br>
+        <input type="submit" value="Submit">
+    </form>
 <%- include("partials/footer.ejs") %>

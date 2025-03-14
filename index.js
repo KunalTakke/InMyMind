@@ -1,5 +1,6 @@
 // imports
 import express from "express";
+import bodyparser from "body-parser"
 
 // global variables
 const app = express();
@@ -7,6 +8,9 @@ const port = 3000;
 
 // telling app to look for static files in public 
 app.use(express.static("public"));
+
+// using bodyparser to parse req and res body
+app.use(bodyparser.urlencoded({extended: true}));
 
 // index page or home page
 app.get("/",(req,res)=>{
@@ -28,7 +32,8 @@ app.get("/write",(req,res)=>{
 
 // for posting on write blog
 app.post("/write",(req,res)=>{
-    res.render("write.ejs");
+    console.log(req.body);
+    res.render("index.ejs");
 });
 
 
