@@ -1,0 +1,23 @@
+{
+  "name": "inmymind",
+  "version": "1.0.0",
+  "description": "Blog website for sharing my thoughts ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KunalTakke/InMyMind.git"
+  },
+  "author": "Kunal Takke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KunalTakke/InMyMind/issues"
+  },
+  "homepage": "https://github.com/KunalTakke/InMyMind#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
