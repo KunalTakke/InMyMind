@@ -6,6 +6,9 @@ import bodyparser from "body-parser"
 const app = express();
 const port = 3000;
 
+// blogs
+let blogs = [] // initialize an empty list
+
 // telling app to look for static files in public 
 app.use(express.static("public"));
 
@@ -39,7 +42,9 @@ app.post("/write",(req,res)=>{
         category: req.body.category,
         essay: req.body.essay
     }
-    res.render("read.ejs",data);
+    blogs.push(data);
+    console.log(blogs);
+    res.render("read.ejs",{blogs});
 });
 
 
