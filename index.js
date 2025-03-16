@@ -32,8 +32,14 @@ app.get("/write",(req,res)=>{
 
 // for posting on write blog
 app.post("/write",(req,res)=>{
-    console.log(req.body);
-    res.render("index.ejs");
+    // console.log(`using request body ${req.body}`);
+    const data = {
+        author: req.body.author,
+        image : req.body["article-image"],
+        category: req.body.category,
+        essay: req.body.essay
+    }
+    res.render("read.ejs",data);
 });
 
 

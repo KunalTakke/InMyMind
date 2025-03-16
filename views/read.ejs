@@ -4,5 +4,12 @@
         <li>
             <a href="#">Dummy one</a>
         </li>
+        <li>
+            <% if(locals.essay){ %>
+                <p><%= essay%></p>
+                <p> - <%= author %></p>
+           <% } %>
+            
+        </li>
     </ul>
 <%- include("partials/footer.ejs") %>
