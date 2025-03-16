@@ -47,7 +47,16 @@ app.post("/write",(req,res)=>{
     res.render("read.ejs",{blogs});
 });
 
+// for deleting posts
+app.delete("/read",(req,res)=>{
+    // when delete button is clicked we pass the logic here to delete a blogs
+    console.log("Delete posts");
+});
 
+app.patch("/read",(req,res)=>{
+    // when update button is clicked we pass the logic here to update the blogs
+    
+});
 
 app.listen(port,()=>{
     console.log(`Listening to ${port} ... `);
