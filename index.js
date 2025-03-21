@@ -6,9 +6,10 @@ import bodyparser from "body-parser"
 const app = express();
 const port = 3000;
 
+
 // blogs
 let blogs = [] // initialize an empty list
-
+let counter = 0;
 // telling app to look for static files in public 
 app.use(express.static("public"));
 
@@ -37,15 +38,21 @@ app.get("/write",(req,res)=>{
 app.post("/write",(req,res)=>{
     // console.log(`using request body ${req.body}`);
     const data = {
+        title: req.body.title,
         author: req.body.author,
         image : req.body["article-image"],
         category: req.body.category,
-        essay: req.body.essay
+        essay: req.body.essay,
+        index: counter
     }
+    counter++;
     blogs.push(data);
     console.log(blogs);
     res.render("read.ejs",{blogs});
 });
+
+//setting event listeners
+
 
 // for deleting posts
 app.delete("/read",(req,res)=>{

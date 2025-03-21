@@ -1,6 +1,8 @@
 <%- include("partials/header.ejs") %>
     <h1>Write a Blog</h1>
     <form action="/write" method="post">
+        <label for="title">Title :</label>
+        <input name="title" type="text" placeholder="Enter your title"><br>
         <label for="author">Name :</label>
         <input name="author" type="text" placeholder="Enter your Name"><br>
         <label for="article-image">Insert Image : </label>
